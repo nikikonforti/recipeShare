@@ -1,0 +1,242 @@
+<!-- To-decide: font, color scheme -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="scripts/bundle.js">
+    // Initialize Firebase
+
+    var config = {
+      apiKey: "AIzaSyB4IYzzkyAnfkA8pCj358tDFukdGUVpS-o",
+      authDomain: "recipeshare-d0453.firebaseapp.com",
+      databaseURL: "https://recipeshare-d0453.firebaseio.com",
+      projectId: "recipeshare-d0453",
+      storageBucket: "recipeshare-d0453.appspot.com",
+      messagingSenderId: "282787222893"
+    };
+    firebase.initializeApp(config);
+
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body, html {
+      height: 100%;
+      margin: 0;
+  }
+
+.body {
+
+    background-image: url("communityFood.JPG");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+
+.login{
+  padding: 40px;
+
+}
+
+.login .usr{
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+
+.login .pswrd {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.login .submitButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+.login .signButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+
+.login .submitButton:hover{
+  opacity: 0.8;
+}
+
+.login .submitButton:active{
+  opacity: 0.6;
+}
+.login .signButton:hover{
+  opacity: 0.8;
+}
+
+.login .signButton:active{
+  opacity: 0.6;
+}
+
+.login .usr:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login .pswrd:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login .submitButton:focus{
+  outline: none;
+
+}
+
+::-webkit-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+::-moz-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+.login .top{
+  padding: 20px;
+}
+.login .bottom{
+  padding-bottom: 20px;
+}
+
+.homes{
+  padding-top: 450px;
+  padding-right: 50px;
+  text-align: right;
+
+}
+.homes input [type=button]:focus{
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<div class="body">
+<div class="header">
+    recipe share
+
+  </div>
+<br>
+<form name="login">
+<div class="login"  align="center">
+  <div class="top">
+    <input class = "usr" type="text" placeholder="username" name="userid"><br>
+  </div>
+  <div class="bottom">
+    <input class ="pswrd" type="password" placeholder="password" name="pswrd"><br>
+  </div>
+  <input class ="submitButton" type="button" onclick="check(this.form)" value="Login"/>
+  <input class ="signButton" type="button" onclick="addUser(this.form)" value="Sign Up"/>
+
+</div>
+
+
+</form>
+
+
+<script language="javascript">  /*function addUser(form){
+firebase.database().ref('recipeshare-d0453').set({
+user: "form.userid.value",
+password: "form.pswrd.value"
+});} */
+</script>
+
+<script language="javascript">
+  function check(form){
+    /*in real life this would check a database, return home page*/
+    if(form.userid.value == "hi" && form.pswrd.value == "123"){
+      window.open('file:///Users/nikikonforti/Desktop/public/homescreen.html')
+      /*'https://www.google.com/maps'*/
+      /*file:///Users/nikikonforti/Desktop/homescreen.html*/
+    }
+    else{
+      alert("The username and password you entered don't mattttch")
+    }
+
+  }
+  function addUser(form){
+    if(form.userid.value != "" && form.pswrd.value != ""){
+      window.open('file:///Users/nikikonforti/Desktop/public/signup.html')
+    }
+    else{
+      alert("You must enter a valid username and password to sign up")
+    }
+  }
+
+</script>
+</div>
+</body>
+</html>
