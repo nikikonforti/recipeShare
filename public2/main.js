@@ -1,5 +1,6 @@
 
 //site functions:
+/*
 var config = {
   apiKey: "AIzaSyB4IYzzkyAnfkA8pCj358tDFukdGUVpS-o",
   authDomain: "recipeshare-d0453.firebaseapp.com",
@@ -8,7 +9,133 @@ var config = {
   storageBucket: "recipeshare-d0453.appspot.com",
   messagingSenderId: "282787222893"
 };
+
 firebase.initializeApp(config);
+*/
+
+
+
+firebase.initializeApp({
+  apiKey: "AIzaSyCvEjA5oyaXTv0HGVids2mWeU6pxVzOGbI",
+  authDomain: "nazlitriesfirestore.firebaseapp.com",
+  projectId: "nazlitriesfirestore",
+});
+
+const firestore = firebase.firestore();
+const settings = {timestampsInSnapshots: true};
+firestore.settings(settings);
+
+function draw(){
+  google.charts.load('current', {'packages':['table']});
+  google.charts.setOnLoadCallback(drawTable);
+}
+
+function drawTable(){
+  var bigOne = document.getElementById('bigOne');
+
+  var dataT = new google.visualization.DataTable();
+  dataT.addColumn('string', 'Recipe');
+  dataT.addColumn('string', 'Serving Size');
+  dataT.addColumn('string', 'Minutes');
+  dataT.addColumn('string', 'Ingredients');
+  var dataArray = [];
+  let element = "sadness";
+  firestore.collection("recipes").get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+        console.log(doc);
+        dataT.addRows([
+        [doc.id, "bank", "bank", "bank"],
+      ]);
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+        table.draw(dataT, {showRowNumber: true, width: '100%', height: '100%'});
+    });
+});
+
+
+
+}
+/*
+<script>
+  //var dbRefName = firebase.
+  
+  var dbRef = firebase.database().ref().child('text');
+//  dbRef.on('value', snap => bigOne.innerText = snap.val());
+  dbRef.on("value", function(snapshot) {
+    var data = snapshot.val();
+    var name = snapshot.val().value;
+    for(var key in data){
+      console.log(key);
+
+      bigOne.innerText += key;
+      bigOne.innerText += data[key];
+      bigOne.innerText += "  -  ";
+    }
+    var dataForTable = snapshot.val()
+
+    google.charts.load('current', {'packages':['table']});
+    google.charts.setOnLoadCallback(drawTable);
+    function drawTable() {
+      var dataT = new google.visualization.DataTable();
+      dataT.addColumn('string', 'Recipe');
+      dataT.addColumn('string', 'Ingredients');
+      console.log(data);
+      //console.log(data[key]);
+      //dataT.addColumn('string', 'Makes for: ');
+      //dataT.addColumn('string', 'Directions');
+      dataT.addRows([
+        [dataForTable, "bank"],
+        ['8000',  "of"],
+        ['12500', "america"],
+        ['7000',  "states"]
+      ]);
+      for(var key in data){
+        dataT.addRows([
+          [key, data[key]]
+
+        ]);
+        console.log(key);
+        console.log(data[key]);
+      }
+
+      var table = new google.visualization.Table(document.getElementById('table_div'));
+
+      table.draw(dataT, {showRowNumber: true, width: '100%', height: '100%'});
+    }
+    //console.log(snapshot.val());
+    console.log(dataForTable);
+    console.log("hello");
+  }, function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  });
+
+
+  console.log(snapshot.val());
+  </script>
+
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable);
+      function drawTable() {
+        var dataT = new google.visualization.DataTable();
+        dataT.addColumn('string', 'Recipe');
+        dataT.addColumn('string', 'Ingredients');
+        //dataT.addColumn('string', 'Makes for: ');
+        //dataT.addColumn('string', 'Directions');
+        dataT.addRows([
+          [data, "bank"],
+          ['8000',  "of"],
+          ['12500', "america"],
+          ['7000',  "states"]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(dataT, {showRowNumber: true, width: '100%', height: '100%'});
+      }
+    </script>
+
+    */
 
 function check(form){
   /*in real life this would check a database, return home page*/
