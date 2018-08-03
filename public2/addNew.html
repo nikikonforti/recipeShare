@@ -1,0 +1,40 @@
+<!-- To-decide: font, color scheme -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+  <script type="text/javascript" src="main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="bodyAN">
+<div class="headerAN">
+    add a recipe
+</div>
+<br>
+<form name="addNewRecipe">
+<div class="addNewRecipe" align="center">
+  <div class ="title">
+    <input class = "recipeTitle" type="text" placeholder="enter recipe name" name="newRecipe"><br>
+  </div>
+  <div class="time">
+    <input class = "recipeTime" type="text" placeholder="how long will it take?" name="newTime"><br>
+  </div>
+  <div class ="amount">
+    <input class = "recipeAmount" type="text" placeholder="what's the serving size?" name="newAmount"><br>
+  </div>
+  <div class ="ingredients">
+    <input class = "recipeIngredients" type="text" placeholder="enter list of ingredients" name="newIngredients"><br>
+  </div>
+  <div class="directions">
+    <input class = "recipeDirections" type="text" placeholder="enter the directions" name="newDirections"><br>
+  </div>
+<form name="loginAN">
+<div class="loginAN"  align="center">
+  <input class ="submitButton" type="button" onclick="checkAN(this.form)" value="create new recipe"/>
+</div>
+</form>
+</div>
+</body>
+</html>

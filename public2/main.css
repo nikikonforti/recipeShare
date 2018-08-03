@@ -1,0 +1,709 @@
+  body, html {
+      height: 100%;
+      margin: 0;
+  }
+
+.body {
+
+    background-image: url("communityFood.JPG");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+
+.login{
+  padding: 40px;
+
+}
+
+.login .usr{
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+
+.login .pswrd {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.login .submitButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+.login .signButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+
+.login .submitButton:hover{
+  opacity: 0.8;
+}
+
+.login .submitButton:active{
+  opacity: 0.6;
+}
+.login .signButton:hover{
+  opacity: 0.8;
+}
+
+.login .signButton:active{
+  opacity: 0.6;
+}
+
+.login .usr:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login .pswrd:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login .submitButton:focus{
+  outline: none;
+
+}
+
+::-webkit-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+::-moz-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+.login .top{
+  padding: 20px;
+}
+.login .bottom{
+  padding-bottom: 20px;
+}
+
+.homes{
+  padding-top: 450px;
+  padding-right: 50px;
+  text-align: right;
+
+}
+.homes input [type=button]:focus{
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+
+
+
+  body, html {
+      height: 100%;
+      margin: 0;
+  }
+
+.bodyHS {
+
+    background-color: #93B784;
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerHS{
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+
+.loginHS{
+  padding: 40px;
+
+
+}
+
+.loginHS .usr{
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+
+.loginHS .pswrd {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.loginHS .submitButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+.loginHS .signButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+
+.loginHS .submitButton:hover{
+  opacity: 0.8;
+}
+
+.loginHS .submitButton:active{
+  opacity: 0.6;
+}
+.loginHS .signButton:hover{
+  opacity: 0.8;
+}
+
+.loginHS .signButton:active{
+  opacity: 0.6;
+}
+
+.loginHS .usr:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.loginHS .pswrd:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.loginHS .submitButton:focus{
+  outline: none;
+
+}
+
+::-webkit-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+::-moz-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+.loginHS .top{
+  padding: 20px;
+}
+.loginHS .bottom{
+  padding-bottom: 20px;
+}
+
+.homes{
+  padding-top: 450px;
+  padding-right: 50px;
+  text-align: right;
+
+}
+.homes input [type=button]:focus{
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+
+
+
+
+  body, html {
+      height: 100%;
+      margin: 0;
+  }
+
+.bodySU {
+
+    background-color: #93B884;
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerSU{
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+
+.loginSU{
+  padding: 40px;
+
+
+}
+
+.loginSU .usr{
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+
+.loginSU .pswrd {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.loginSU .submitButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+.loginSU .signButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+
+.loginSU .submitButton:hover{
+  opacity: 0.8;
+}
+
+.loginSU .submitButton:active{
+  opacity: 0.6;
+}
+.loginSU .signButton:hover{
+  opacity: 0.8;
+}
+
+.loginSU .signButton:active{
+  opacity: 0.6;
+}
+
+.loginSU .usr:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.loginSU .pswrd:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.loginSU .submitButton:focus{
+  outline: none;
+
+}
+
+::-webkit-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+::-moz-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+.loginSU .top{
+  padding: 20px;
+}
+.loginSU .bottom{
+  padding-bottom: 20px;
+}
+
+.homes{
+  padding-top: 450px;
+  padding-right: 50px;
+  text-align: right;
+
+}
+.homes input [type=button]:focus{
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.0);
+}
+
+
+
+
+
+
+  body, html {
+      height: 100%;
+      margin: 0;
+  }
+
+.bodyAN {
+
+    background-color: #93B884;
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerAN{
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+
+.addNewRecipe{
+  padding: 40px;
+}
+
+.addNewRecipe .recipeTitle{
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+
+.addNewRecipe .recipeTime {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.addNewRecipe .recipeAmount {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.addNewRecipe .recipeIngredients {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.addNewRecipe .recipeDirections {
+  width: 250px;
+  height: 40px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.addNewRecipe .submitButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+.addNewRecipe .signButton{
+  padding: 10px 15px 11px !important;
+  font-size: 18px !important;
+  font-family: monospace;
+  background-color: #57d6c7;
+  font-weight: bold;
+  text-shadow: 1px 1px #57D6C7;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+.addNewRecipe .title{
+  padding: 20px;
+}
+.addNewRecipe .time{
+  padding: 20px;
+}
+
+.addNewRecipe .amount{
+  padding-bottom: 20px;
+}
+
+.addNewRecipe .ingredients{
+  padding-bottom: 20px;
+}
+
+.addNewRecipe .directions{
+  padding-bottom: 20px;
+}
+
+.addNewRecipe .submitButton:hover{
+  opacity: 0.8;
+}
+
+.addNewRecipe .submitButton:active{
+  opacity: 0.6;
+}
+.addNewRecipe .signButton:hover{
+  opacity: 0.8;
+}
+
+.addNewRecipe .signButton:active{
+  opacity: 0.6;
+}
+
+.addNewRecipe .recipeTitle:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.addNewRecipe .recipeTime:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.addNewRecipe .recipeAmount:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.addNewRecipe .recipeIngredients:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.addNewRecipe .recipeDirections:focus{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.9);
+}
+
+.addNewRecipe .submitButton:focus{
+  outline: none;
+
+}
+
+::-webkit-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+::-moz-input-placeholder{
+  font-family: monospace;
+  color: black;
+}
+
+.addNewRecipe .title{
+  padding: 20px;
+}
+.addNewRecipe .time{
+  padding: 20px;
+}
+
+.addNewRecipe .ingredients{
+  padding: 20px;
+}
+
+.addNewRecipe .directions{
+  padding-bottom: 20px;
+}
+
+.homes{
+  padding-top: 450px;
+  padding-right: 50px;
+  text-align: right;
+
+}
+.homes input [type=button]:focus{
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.0);
+}
