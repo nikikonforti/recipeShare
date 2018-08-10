@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> this would be your recipes:</title>
+  </head>
+  <body>
+
+  <h1 id="bigOne"></h1>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAMfXWVG5L8UPdI81-o2iBbpXjlaL0SYnI",
+      authDomain: "recipeadd-7d44b.firebaseapp.com",
+      databaseURL: "https://recipeadd-7d44b.firebaseio.com",
+      projectId: "recipeadd-7d44b",
+      storageBucket: "",
+      messagingSenderId: "150849926450"
+    };
+    firebase.initializeApp(config);
+
+
+    var bigOne = document.getElementById('bigOne');
+    var dbRef = firebase.database().ref().child('text');
+    dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!-- To-decide: font, color scheme -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <!--<script type="text/javascript" src="main.js"></script>-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="bodyAN">
+<div class="headerAN">
+    add a recipe
+</div>
+<br>
+<form name="addNewRecipe">
+<div class="addNewRecipe" align="center">
+  <div class ="title">
+    <input class = "recipeTitle" type="text" placeholder="enter recipe name"  id="name_field"><br>
+  </div>
+  <div class="time">
+    <input class = "recipeTime" type="text" placeholder="how long will it take?" id="minute_field"><br>
+  </div>
+  <div class ="amount">
+    <input class = "recipeAmount" type="text" placeholder="what's the serving size?" id="serving_field"><br>
+  </div>
+  <div class ="ingredients">
+    <input class = "recipeIngredients" type="text" placeholder="enter list of ingredients" id="ingredients_field"><br>
+  </div>
+  <div class="directions">
+    <input class = "recipeDirections" type="text" placeholder="enter the directions" id="directions_field"><br>
+  </div>
+
+<form name="loginAN">
+<div class="loginAN"  align="center">
+  <input class ="submitButton" type="button" onclick="storeData()" value="create new recipe"/>
+</div>
+</form
+</div>
+<!--
+<div class="main-form">
+  <h3> Firebase Firestore </h3>
+  <p>Welcome </p>
+  <input type="text" placeholder="Enter here..." id="minute_field">
+  <input type="text" placeholder="Enter here....." id="serving_field">
+  <button id="submit_btn" onclick="storeData()">Proceed</button>
+</div>
+
+<div class="main-list" id="list_div">
+  <div class="list-item">
+    <h3>minutes taken </h3>
+    <p>Minutes: blah blah </p>
+  </div>
+</div>-->
+
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+
+<script>
+  // Initialize Firebase
+  /*var config = {
+    apiKey: "AIzaSyCvEjA5oyaXTv0HGVids2mWeU6pxVzOGbI",
+    authDomain: "nazlitriesfirestore.firebaseapp.com",
+    databaseURL: "https://nazlitriesfirestore.firebaseio.com",
+    projectId: "nazlitriesfirestore",
+    storageBucket: "nazlitriesfirestore.appspot.com",
+    messagingSenderId: "1017701881603"
+  };
+  firebase.initializeApp(config);*/
+</script>
+<script src="main.js"></script>
+</div>
+</body>
+</html>

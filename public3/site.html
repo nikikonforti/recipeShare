@@ -1,0 +1,37 @@
+<!-- To-decide: font, color scheme -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+  <!--<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>-->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+  <!--<script type="text/javascript" src="main.js"></script>-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="body">
+<div class="header">
+    recipe share
+</div>
+<br>
+<form name="login">
+<div class="login"  align="center">
+  <div class="top">
+    <input class = "usr" type="email" placeholder="email" name="userid" id="txtEmail"><br>
+  </div>
+  <div class="bottom">
+    <input class ="pswrd" type="password" placeholder="password" name="pswrd" id="txtPassword"><br>
+  </div>
+  <input class ="submitButton" type="button" onclick="check(this.form)" value="Login" id="btnLogin"/>
+  <input class ="signButton" type="button" onclick="addUser(this.form)" value="Sign Up" id="btnSignUp"/>
+  <input class="btn btn-action hide" type="button" onclick="LOform(this.form)" value="Logout" id="btnLogout"/>
+</div>
+</form>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
