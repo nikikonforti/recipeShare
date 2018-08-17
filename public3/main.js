@@ -1,23 +1,4 @@
-//site functions:
-/*
-var config = {
-  apiKey: "AIzaSyB4IYzzkyAnfkA8pCj358tDFukdGUVpS-o",
-  authDomain: "recipeshare-d0453.firebaseapp.com",
-  databaseURL: "https://recipeshare-d0453.firebaseio.com",
-  projectId: "recipeshare-d0453",
-  storageBucket: "recipeshare-d0453.appspot.com",
-  messagingSenderId: "282787222893"
-};
-firebase.initializeApp(config);
-*/
 
-//window.alert("OKAY");
-
-/*firebase.initializeApp({
-  apiKey: "AIzaSyCvEjA5oyaXTv0HGVids2mWeU6pxVzOGbI",
-  authDomain: "nazlitriesfirestore.firebaseapp.com",
-  projectId: "nazlitriesfirestore",
-});*/
 
 // Initialize Firebase
 var config = {
@@ -31,14 +12,9 @@ var config = {
 firebase.initializeApp(config);
 
 
-
-
-
 var firestore = firebase.firestore(); //const or var?
 const settings = {timestampsInSnapshots: true};
 firestore.settings(settings);
-
-
 //var dataT = new google.visualization.DataTable();
 
 function drawTable(){
@@ -82,20 +58,40 @@ function drawTable(){
           [doc.id, doc.data().serving, doc.data().minutes],
         ]);
           var table = new google.visualization.Table(document.getElementById('table_div'));
+          var recGrow = new String(document.getElementById('bigRecipe'));
+          console.log(doc.data().minutes);
+
           table.draw(dataT, {showRowNumber: true, width: '100%', height: '100%'});
           //document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){element.addEventListener("click", function(){alert("dave!")})})
           document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){element.addEventListener("click", popRecipe)});
       });
   });
+}
+
+
+function getRecipeData(){
+    const list_div = document.querySelector("#list_div");
+    var example = document.getElementsByClassName("name");
+    //console.log(firestore.collection("recipes").doc('name'));//get().querySnapshot.data);
+    //example[0].innerHTML = firestore.collection("recipes").get(data().minutes);
+    firestore.collection("recipes").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            console.log(doc.data().minutes);
+            list_div.innerHTML += "<div class='name'><h3>" + doc.data().minutes + "</h3></div>"
+            //document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){
+            });
+        });
+
+        //list_div.innerHTML += "<div class='name'><h3>" + element.data().minutes + "</h3></div>"
 
 
 
 }
-
 //search_btn.addEventListener("click", doSearch);
 
 function popRecipe(event) {
-    console.log("dave rocks")
+    console.log("dave sucks")
+    console.log(element.id)
     //var popup = document.getElementById("myPopup");
     //popup.classList.toggle("show");
     var recipeLargen = window.open('recipeGrow.html');
@@ -129,7 +125,8 @@ google.visualization.events.addListener(dataT, 'select', function () {
 });
 */
 
-const list_div = document.querySelector("#list_div");
+
+/*const list_div = document.querySelector("#list_div");
 firestore.collection("recipes").get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
     console.log(doc)
@@ -137,11 +134,9 @@ firestore.collection("recipes").get().then(function(querySnapshot) {
     list_div.innerHTML += "<div class='list-item'><h3>" + doc.data().minutes + "</h3></div>"
 
   });
-  var minData = doc.data().minutes
-  console.log(minData)
-});
-
-
+  //var minData = doc.data().minutes
+  //console.log(minData)
+});*/
 
 /*
 function selectHandler(dataEntry) {
@@ -180,10 +175,6 @@ function storeData(){
     console.error("Error writing document.");
   });
 }
-
-
-
-
 
 
 /*firestore.collection("recipes").get().then(function(querySnapshot) {
@@ -271,7 +262,7 @@ function storeData(){
 function check(form){
   /*in real life this would check a database, return home page*/
   if(form.userid.value == "hi" && form.pswrd.value == "123"){
-    window.location.replace('file:///Users/nikikonforti/Desktop/public2/homescreen.html')
+    window.location.replace('homescreen.html')
     /*'https://www.google.com/maps'*/
     /*file:///Users/nikikonforti/Desktop/homescreen.html*/
   }
@@ -280,31 +271,31 @@ function check(form){
   }
 }
 function addUser(form){
-  window.location.replace('file:///Users/nikikonforti/Desktop/public2/signup.html')
+  window.location.replace('signup.html')
 }
 
 //addNew functions:
 function checkAN(form){
   /*in real life this would check a database, return home page*/
-  window.location.replace('file:///Users/nikikonforti/Desktop/public2/homescreen.html')
+  window.location.replace('homescreen.html')
 }
 
 //homescreen functions:
 function checkHS(form){
   /*in real life this would check a database, return home page*/
-  window.location.replace('file:///Users/nikikonforti/Desktop/public2/addNew.html')
+  window.location.replace('addNew.html')
 }
 
 function checkHSLO(form){
     /*in real life this would check a database, return home page*/
-  window.location.replace('file:///Users/nikikonforti/Desktop/public2/site.html')
+  window.location.replace('site.html')
 }
 
 //signup functions:
 function checkSU(form){
   /*in real life this would check a database, return home page*/
   if((form.newUsername.value != "")&&(form.newPassword.value != "") && (form.newEmail.value!="")){
-    window.location.replace('file:///Users/nikikonforti/Desktop/public2/homescreen.html')
+    window.location.replace('homescreen.html')
   }
   else{
     alert("Please fill out all information to sign up.")
@@ -312,11 +303,11 @@ function checkSU(form){
 }
 
 function openDoc(form){
-  window.location.replace('file:///Users/nikikonforti/Desktop/public2/site.html');
+  window.location.replace('site.html');
 }
 
 function LOform(form){
-  window.location.replace('file:///Users/nikikonforti/Desktop/public2/site.html');
+  window.location.replace('site.html');
 }
 
 /*

@@ -6,6 +6,7 @@
   <!--<script type="text/javascript" src="main.js"></script>-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<body onload="getRecipeData();">
 <body>
 <div class="bodyRG">
 <div class="headerRG">
@@ -13,9 +14,9 @@
 </div>
 <br>
 <form name="bigRecipe">
-<div class="bigRecipe"  align="center">
+<div class="bigRecipe"  align="center" id="list_div">
   <div class="name">
-    this will be the name of the recipe  <br>
+    <h3>this will be the name of the recipe</h3>  <br>
   </div>
   <div class="minutes">
     time it will take <br>
@@ -26,13 +27,15 @@
   <div class="ingredients">
     ingredients list <br>
   </div>
-  <div class="directions">
+   <div class="directions">
     directions list <br>
   </div>
   <input class ="submitButton" type="button" onclick="checkAN(this.form)" value="Go back" id="btnLogin"/>
 </div>
 </form>
 </div>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
