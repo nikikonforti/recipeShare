@@ -11,7 +11,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
-
+var lol;
 var firestore = firebase.firestore(); //const or var?
 const settings = {timestampsInSnapshots: true};
 firestore.settings(settings);
@@ -63,38 +63,111 @@ function drawTable(){
 
           table.draw(dataT, {showRowNumber: true, width: '100%', height: '100%'});
           //document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){element.addEventListener("click", function(){alert("dave!")})})
-          document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){element.addEventListener("click", popRecipe)});
+          document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){
+            //console.log(element.minutes);//not defined
+            var individual = element.addEventListener("click", popRecipe)
+            //console.log(individual);
+
+          });
+
       });
   });
 }
 
 
 function getRecipeData(){
-    const list_div = document.querySelector("#list_div");
+    console.log("HELLO");
+    //var stored = localStorage.getItem("getLOL", lol);
+    var stored = text.innerHTML;
+    console.log(stored);
+    /////const list_div = document.querySelector("#list_div");
     var example = document.getElementsByClassName("name");
     //console.log(firestore.collection("recipes").doc('name'));//get().querySnapshot.data);
-    //example[0].innerHTML = firestore.collection("recipes").get(data().minutes);
-    firestore.collection("recipes").get().then(function(querySnapshot) {
+    example[0] = stored;//firestore.collection("recipes");
+    /*firestore.collection("recipes").get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
-            console.log(doc.data().minutes);
-            list_div.innerHTML += "<div class='name'><h3>" + doc.data().minutes + "</h3></div>"
+            //console.log(element.doc.data().minutes);
+            //console.log(this().data().minutes);
+            list_div.innerHTML += "<div class='name'>" + tester + "/div>"
             //document.querySelectorAll('#table_div tr td:nth-child(2)').forEach(function(element){
             });
         });
-
+*/
         //list_div.innerHTML += "<div class='name'><h3>" + element.data().minutes + "</h3></div>"
 
 
 
 }
 //search_btn.addEventListener("click", doSearch);
-
 function popRecipe(event) {
     console.log("dave sucks")
-    console.log(element.id)
+    //alert("Button clicked, id "+this.innerHTML+", text"+this.minutes);
+    //var recipeID = this.id;
+    var name = event.target || event.srcElement
+    console.log("this is name: " + name.innerHTML);
+    //var minutes = event.srcElement;
+    //console.log(minutes);
+    //var element = document.getElementById('table_div'); //to delete table
+    //element.parentNode.removeChild(element);
+    firestore.collection("recipes").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+          console.log("hi nazli");
+          if(doc.id == name.innerHTML){
+            console.log(doc.id + doc.data().minutes + doc.data().serving );
+            //alert(" your recipe: " + "\n" + "\n" + "name: " + doc.id + "\n" + "it will take: " + doc.data().minutes + "\n" + "serving size: " + doc.data().serving
+              //+ "\n" + "ingredient list: " + doc.data().ingredients + "\n" + "directions: " + doc.data().directions);
+              //var div = document.createElement("div");
+              var div = document.getElementById("content");
+//<textarea class='autoExpand' rows='3' data-min-rows='3' placeholder='Auto-Expanding Textarea'></textarea>
+              div.innerHTML =
+              //div.innerHTML =
+                  '<div class="recipe-replace">\n' +
+                  '<div class="title">your recipe: </div>\n' +
+                  '<textarea readonly class="autoExpand" >' +doc.id + '</textarea>\n' +
+                  '\n<div class="title">it will take: </div>\n' +
+                  '<textarea readonly class="autoExpand">' +doc.data().minutes + '</textarea>\n' +
+                  '\n<div class="title">serving size: </div>\n' +
+                  '<textarea readonly class="autoExpand">' +doc.data().serving + '</textarea>\n' +
+                  '\n<div class="title">ingredient list: </div>\n' +
+                  '<textarea readonly class="autoExpand">' +doc.data().ingredients + '</textarea>\n' +
+                  '\n<div class="title">directions: </div>\n' +
+                  '<textarea readonly class="autoExpand">' +doc.data().directions + '</textarea>\n' +
+                  '\n</div>\n';
+                  
+              $(document)
+              .one('focus.autoExpand', 'textarea.autoExpand', function(){
+                  var savedValue = this.value;
+                  this.value = '';
+                  this.baseScrollHeight = this.scrollHeight;
+                  this.value = savedValue;
+              })
+              .on('input.autoExpand', 'textarea.autoExpand', function(){
+                  var minRows = this.getAttribute('data-min-rows')|0, rows;
+                  this.rows = minRows;
+                  rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 16);
+                  this.rows = minRows + rows;
+              });
+              var buttonReplace = document.getElementById("buttonlol");
+
+              buttonReplace.innerHTML =
+                  //'<div class="loginHS"  align="center">' +
+                  '<input class ="submitButton" type="button" onclick="checkAN(this.form)" value="Go back"/>';
+                  //'</div>';
+          }
+        });
+    });
+    /*var tableData = (this).children("td").map(function() {
+        return (this).text();
+    }).get();
+
+    console.log(tableData);*/
+    //alert("serviceID :: " + recipeID);
+    //console.log(element.id)
     //var popup = document.getElementById("myPopup");
     //popup.classList.toggle("show");
-    var recipeLargen = window.open('recipeGrow.html');
+    //window.open("recipeGrow.html");
+    //localStorage.setItem("getLOL", lol);
+
 }
 
 function draw(){
