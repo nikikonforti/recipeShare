@@ -157,14 +157,14 @@
 
 
   body{
-      min-height: 150%;
+      min-height: 10%;
       margin: 0;
       border: 1px solid transparent;
 
   }
 
   html{
-    height: 500%;
+    height: 50%;  /*500*/
 
 
   }
@@ -827,7 +827,7 @@ html {
     height: 100%;
     margin: 0;
 }
-/*body{ background:#4A90E2; display:flex; align-items:center; }*/
+body{ background:#93B784; align-items:center;} /*display:flex; align-items:center; }*/
 
 
 /*.contentClass {

@@ -117,6 +117,12 @@ function popRecipe(event) {
             //alert(" your recipe: " + "\n" + "\n" + "name: " + doc.id + "\n" + "it will take: " + doc.data().minutes + "\n" + "serving size: " + doc.data().serving
               //+ "\n" + "ingredient list: " + doc.data().ingredients + "\n" + "directions: " + doc.data().directions);
               //var div = document.createElement("div");
+              var buttonReplace = document.getElementById("buttonlol");
+
+              buttonReplace.innerHTML =
+                  //'<div class="loginHS"  align="center">' +
+                  '<input class ="submitButton" type="button" onclick="checkAN(this.form)" value="Go back"/>';
+                  //'</div>';
               var div = document.getElementById("content");
 //<textarea class='autoExpand' rows='3' data-min-rows='3' placeholder='Auto-Expanding Textarea'></textarea>
               div.innerHTML =
@@ -133,7 +139,7 @@ function popRecipe(event) {
                   '\n<div class="title">directions: </div>\n' +
                   '<textarea readonly class="autoExpand">' +doc.data().directions + '</textarea>\n' +
                   '\n</div>\n';
-                  
+
               $(document)
               .one('focus.autoExpand', 'textarea.autoExpand', function(){
                   var savedValue = this.value;
@@ -147,12 +153,7 @@ function popRecipe(event) {
                   rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 16);
                   this.rows = minRows + rows;
               });
-              var buttonReplace = document.getElementById("buttonlol");
 
-              buttonReplace.innerHTML =
-                  //'<div class="loginHS"  align="center">' +
-                  '<input class ="submitButton" type="button" onclick="checkAN(this.form)" value="Go back"/>';
-                  //'</div>';
           }
         });
     });
